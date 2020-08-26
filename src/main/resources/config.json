@@ -1,0 +1,18 @@
+{
+  "list": [
+    {
+      "car1": {
+        "window": 1,
+        "engine": "e1",
+        "wheel": 10
+      }
+    },
+    {
+      "car2": {
+        "window": 2,
+        "engine": "e2",
+        "wheel": 20
+      }
+    }
+  ]
+}
