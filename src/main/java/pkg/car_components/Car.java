@@ -1,9 +1,13 @@
 package pkg.car_components;
 
+import org.springframework.beans.factory.support.ManagedList;
+
 public class Car {
     private Wheel wheel;
     private Engine engine;
     private Window window;
+
+    private ManagedList<Engine> engineList;
 
     public Wheel getWheel() {
         return wheel;
@@ -30,6 +34,24 @@ public class Car {
     }
 
     public void startEngine() {
-        engine.start();
+        if (engine != null) {
+            System.out.println("single engine");
+            engine.start();
+        }
+
+        if (engineList != null) {
+            System.out.println("engine list");
+            for (Engine e : engineList) {
+                e.start();
+            }
+        }
+    }
+
+    public ManagedList<Engine> getEngineList() {
+        return engineList;
+    }
+
+    public void setEngineList(ManagedList<Engine> engineList) {
+        this.engineList = engineList;
     }
 }
