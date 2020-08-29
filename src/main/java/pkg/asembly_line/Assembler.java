@@ -9,5 +9,6 @@ public class Assembler {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(Config.class);
         Car car = applicationContext.getBean(Car.class);
         car.startEngine();
+        applicationContext.close();
     }
 }

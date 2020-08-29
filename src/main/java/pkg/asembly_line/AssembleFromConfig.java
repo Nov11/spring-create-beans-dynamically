@@ -12,5 +12,6 @@ public class AssembleFromConfig {
         applicationContext.refresh();
         Car car = (Car) applicationContext.getBean("car_d");
         car.startEngine();
+        applicationContext.close();
     }
 }
